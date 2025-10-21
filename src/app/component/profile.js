@@ -227,11 +227,11 @@ const TypewriterEffect = ({
     // min-h ensures no layout shift, the span element handles the blinking cursor
     <Title
       level={3}
-      className="!text-xl md:!text-2xl !mt-2 !text-blue-600 dark:!text-blue-400 min-h-[30px] md:min-h-[36px] overflow-hidden pr-1"
+      className="!text-xl md:!text-2xl !mt-2 !text-blue-400 min-h-[30px] md:min-h-[36px] overflow-hidden pr-1"
     >
       {text}
       {/* Blinking Cursor element. The 'animate-cursor-blink' class is defined in the <style> block below. */}
-      <span className="inline-block align-bottom border-r-4 border-solid border-blue-600 dark:border-blue-400 opacity-100 animate-cursor-blink">
+      <span className="inline-block align-bottom border-r-4 border-solid border-blue-400 opacity-100 animate-cursor-blink">
         &nbsp;
       </span>
     </Title>
@@ -265,7 +265,7 @@ const HeroSection = ({ scrollToSection, onDownloadClick }) => {
   return (
     <div
       id="Home"
-      className="min-h-[80vh] flex items-center justify-center text-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+      className="min-h-[80vh] flex items-center justify-center text-center bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-4xl p-6 md:p-12">
         <div className="flex justify-center mb-6">
@@ -282,7 +282,7 @@ const HeroSection = ({ scrollToSection, onDownloadClick }) => {
         </div>
         <Title
           level={1}
-          className="!text-5xl md:!text-7xl !font-extrabold !text-gray-900 dark:!text-white"
+          className="!text-5xl md:!text-7xl !font-extrabold !text-white"
         >
           {portfolioData.name}
         </Title>
@@ -290,7 +290,7 @@ const HeroSection = ({ scrollToSection, onDownloadClick }) => {
         {/* Typing Animation */}
         <TypewriterEffect phrases={typingPhrases} />
 
-        <Paragraph className="!text-lg md:!text-xl !mt-6 !text-gray-600 dark:!text-gray-300">
+        <Paragraph className="!text-lg md:!text-xl !mt-6 !text-gray-300">
           Bridging beautiful design and robust code.
         </Paragraph>
 
@@ -307,7 +307,7 @@ const HeroSection = ({ scrollToSection, onDownloadClick }) => {
           <Button
             type="dashed"
             size="large"
-            className="!text-blue-600 dark:!text-blue-400 !border-blue-600 dark:!border-blue-400 hover:!bg-blue-50 dark:hover:!bg-blue-900/30 rounded-lg h-10 font-semibold transition-all duration-300 hover:scale-[1.05]"
+            className="!text-blue-400 !border-blue-400 hover:!bg-blue-900/30 rounded-lg h-10 font-semibold transition-all duration-300 hover:scale-[1.05]"
             onClick={handleDownloadResume}
           >
             ⬇️ Download Resume
@@ -321,13 +321,13 @@ const HeroSection = ({ scrollToSection, onDownloadClick }) => {
 const AboutSection = () => (
   <div
     id="About"
-    className="p-6 md:p-12 lg:p-20 bg-white dark:bg-gray-800 transition-colors duration-300"
+    className="p-6 md:p-12 lg:p-20 bg-gray-800 transition-colors duration-300"
   >
     <div className="max-w-6xl mx-auto">
       {/* Heading */}
       <Title
         level={2}
-        className="!text-4xl !font-bold !text-center !mb-12 !text-gray-900 dark:!text-white"
+        className="!text-4xl !font-bold !text-center !mb-12 !text-white"
       >
         About Me
       </Title>
@@ -335,7 +335,7 @@ const AboutSection = () => (
       <Row gutter={[32, 32]} justify="center" align="middle">
         <Col xs={24} lg={16}>
           {/* About Text */}
-          <Paragraph className="!text-lg leading-relaxed !text-gray-700 dark:!text-gray-300">
+          <Paragraph className="!text-lg leading-relaxed !text-gray-300">
             {portfolioData.about}
           </Paragraph>
 
@@ -343,7 +343,7 @@ const AboutSection = () => (
           <div className="mt-8">
             <Title
               level={4}
-              className="!text-2xl !font-semibold !mb-4 !text-gray-900 dark:!text-white"
+              className="!text-2xl !font-semibold !mb-4 !text-white"
             >
               My Core Skills
             </Title>
@@ -377,13 +377,13 @@ const AboutSection = () => (
 const ExperienceSection = () => (
   <div
     id="Experience"
-    className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+    className="p-6 md:p-12 lg:p-20 bg-gray-900 transition-colors duration-300"
   >
     <div className="max-w-6xl mx-auto">
       {/* Updated Heading for Dark Mode */}
       <Title
         level={2}
-        className="!text-4xl !font-bold !text-center !mb-12 !text-gray-900 dark:!text-white"
+        className="!text-4xl !font-bold !text-center !mb-12 !text-white"
       >
         Professional Experience
       </Title>
@@ -451,7 +451,7 @@ const ExperienceSection = () => (
               </div>
 
               {/* Responsibilities */}
-              <ul className="list-disc pl-5 space-y-2 !text-gray-700 dark:!text-gray-300">
+              <ul className="list-disc pl-5 space-y-2 !text-gray-300">
                 {job.responsibilities.map((res, i) => (
                   <li key={i}>{res}</li>
                 ))}
@@ -468,13 +468,13 @@ const ExperienceSection = () => (
 const EducationSection = () => (
   <div
     id="Education"
-    className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+    className="p-6 md:p-12 lg:p-20 bg-gray-800 transition-colors duration-300"
   >
     <div className="max-w-6xl mx-auto">
       {/* Updated Heading for Dark Mode */}
       <Title
         level={2}
-        className="!text-4xl !font-bold !text-center !mb-12 !text-gray-900 dark:!text-white"
+        className="!text-4xl !font-bold !text-center !mb-12 !text-white"
       >
         Education
       </Title>
@@ -482,7 +482,7 @@ const EducationSection = () => (
         {portfolioData.education.map((edu, index) => (
           <Col key={index} xs={24} md={20}>
             <Card
-              className="shadow-2xl dark:border-gray-700 transition-all duration-300 mb-8 hover:shadow-blue-500/50 hover:scale-[1.01] rounded-xl"
+              className="shadow-2xl border-gray-700 transition-all duration-300 mb-8 hover:shadow-blue-500/50 hover:scale-[1.01] rounded-xl"
               style={{
                 backgroundColor: "var(--ant-bg-container)",
               }}
@@ -505,20 +505,20 @@ const EducationSection = () => (
 
                 <Title
                   level={3}
-                  className="!text-xl !mb-0 !text-blue-600 dark:!text-blue-400"
+                  className="!text-xl !mb-0 !text-blue-400"
                 >
                   {edu.institution}
                 </Title>
               </div>
 
               {/* Degree */}
-              <Paragraph className="!text-lg !font-semibold !text-gray-900 dark:!text-white">
+              <Paragraph className="!text-lg !font-semibold !text-white">
                 {edu.degree}
               </Paragraph>
 
               {/* Grade / CGPA */}
               {edu.grade && (
-                <Text className="block mb-1 !text-blue-500 dark:!text-blue-400 !font-medium">
+                <Text className="block mb-1 !text-blue-400 !font-medium">
                   Grade: {edu.grade}
                 </Text>
               )}
@@ -526,13 +526,13 @@ const EducationSection = () => (
               {/* Period */}
               <Text
                 type="secondary"
-                className="block mb-2 !text-gray-500 dark:!text-gray-400"
+                className="block mb-2 !text-gray-400"
               >
                 {edu.period}
               </Text>
 
               {/* Description */}
-              <Paragraph className="!text-base !text-gray-700 dark:!text-gray-300">
+              <Paragraph className="!text-base !text-gray-300">
                 {edu.details}
               </Paragraph>
             </Card>
@@ -546,13 +546,13 @@ const EducationSection = () => (
 const AchievementsSection = () => (
   <div
     id="Achievements"
-    className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+    className="p-6 md:p-12 lg:p-20 bg-gray-900 transition-colors duration-300"
   >
     <div className="max-w-6xl mx-auto">
       {/* Updated Heading for Dark Mode */}
       <Title
         level={2}
-        className="!text-4xl !font-bold !text-center !mb-12 !text-gray-900 dark:!text-white"
+        className="!text-4xl !font-bold !text-center !mb-12 !text-white"
       >
         Awards & Recognition
       </Title>
@@ -560,7 +560,7 @@ const AchievementsSection = () => (
         {portfolioData.achievements.map((achievement, index) => (
           <Col key={index} xs={24} md={12} lg={20}>
             <Card
-              className="rounded-xl h-full shadow-lg dark:bg-gray-800 dark:border-gray-700 transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-900/30"
+              className="rounded-xl h-full shadow-lg border-gray-700 transition-all duration-300 hover:bg-blue-900/30"
               style={{ backgroundColor: "var(--ant-bg-container)" }}
             >
               <Space
@@ -586,7 +586,7 @@ const AchievementsSection = () => (
                 )}
 
                 {/* Achievement Text */}
-                <Paragraph className="!text-lg !font-medium !text-gray-800 dark:!text-gray-200">
+                <Paragraph className="!text-lg !font-medium !text-gray-200">
                   {achievement.achivement}
                 </Paragraph>
               </Space>
@@ -601,13 +601,13 @@ const AchievementsSection = () => (
 const ProjectsSection = () => (
   <div
     id="Projects"
-    className="p-6 md:p-12 lg:p-20 bg-white dark:bg-gray-800 transition-colors duration-300"
+    className="p-6 md:p-12 lg:p-20 bg-gray-800 transition-colors duration-300"
   >
     <div className="max-w-6xl mx-auto">
       {/* Updated Heading for Dark Mode */}
       <Title
         level={2}
-        className="!text-4xl !font-bold !text-center !mb-12 !text-gray-900 dark:!text-white"
+        className="!text-4xl !font-bold !text-center !mb-12 !text-white"
       >
         Featured Projects
       </Title>
@@ -615,7 +615,7 @@ const ProjectsSection = () => (
         {portfolioData.projects.map((project) => (
           <Col key={project.key} xs={24} md={12} lg={20}>
             <Card
-              className="shadow-2xl dark:border-gray-700 transition-all duration-300 mb-8 hover:shadow-blue-500/50 hover:scale-[1.01] rounded-xl"
+              className="shadow-2xl border-gray-700 transition-all duration-300 mb-8 hover:shadow-blue-500/50 hover:scale-[1.01] rounded-xl"
               style={{
                 backgroundColor: "var(--ant-bg-container)",
               }}
@@ -649,7 +649,7 @@ const ProjectsSection = () => (
                 {project.technologies.map((tech) => (
                   <Tag
                     key={tech}
-                    className=" !text-blue-600 dark:!text-blue-300 rounded"
+                    className="!text-blue-300 rounded"
                     style={{
                       background: "var(--ant-tag-bg)",
                     }}
@@ -659,7 +659,7 @@ const ProjectsSection = () => (
                 ))}
               </Space>
 
-              <Paragraph className="!text-base !text-gray-600 dark:!text-gray-300 mt-4">
+              <Paragraph className="!text-base !text-gray-300 mt-4">
                 {project.description}
               </Paragraph>
             </Card>
@@ -697,17 +697,17 @@ const ContactSection = ({ onDownloadClick }) => {
   return (
     <div
       id="Contact"
-      className="p-6 md:p-12 lg:p-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+      className="p-6 md:p-12 lg:p-20 bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-4xl mx-auto text-center">
         {/* Updated Heading for Dark Mode */}
         <Title
           level={2}
-          className="!text-4xl !font-bold !mb-4 !text-gray-900 dark:!text-white"
+          className="!text-4xl !font-bold !mb-4 !text-white"
         >
           Let&apos;s Connect
         </Title>
-        <Paragraph className="!text-xl !mb-8 !text-gray-600 dark:!text-gray-300">
+        <Paragraph className="!text-xl !mb-8 !text-gray-300">
           I’m always open to discussing new projects or opportunities. Send a
           message below.
         </Paragraph>
@@ -716,12 +716,12 @@ const ContactSection = ({ onDownloadClick }) => {
           <Col xs={24} lg={25}>
             {/* Contact Form */}
             <Card
-              className="rounded-xl shadow-2xl dark:border-gray-700"
+              className="rounded-xl shadow-2xl border-gray-700"
               style={{
                 backgroundColor: "var(--ant-bg-container)",
               }}
               title={
-                <div className="!text-lg font-semibold !text-blue-600 dark:!text-blue-400">
+                <div className="!text-lg font-semibold !text-blue-400">
                   Send Me a Message
                 </div>
               }
@@ -735,7 +735,7 @@ const ContactSection = ({ onDownloadClick }) => {
                 >
                   <Input
                     placeholder="Your Name"
-                    className="rounded-lg h-10 dark:!border-gray-60"
+                    className="rounded-lg h-10 !border-gray-60"
                     style={{
                       color: "#1338BE",
                       fontWeight: "600",
@@ -755,7 +755,7 @@ const ContactSection = ({ onDownloadClick }) => {
                 >
                   <Input
                     placeholder="Your Email"
-                    className="rounded-lg h-10 dark:!border-gray-600"
+                    className="rounded-lg h-10 !border-gray-600"
                     style={{
                       color: "#1338BE",
                       fontWeight: "600",
@@ -772,7 +772,7 @@ const ContactSection = ({ onDownloadClick }) => {
                   <Input.TextArea
                     rows={4}
                     placeholder="Your Message"
-                    className="rounded-lg dark:!border-gray-600"
+                    className="rounded-lg !border-gray-600"
                     style={{
                       color: "#1338BE",
                       fontWeight: "600",
@@ -799,24 +799,24 @@ const ContactSection = ({ onDownloadClick }) => {
           <Col xs={24} lg={25}>
             {/* Contact Details */}
             <Card
-              className="rounded-xl shadow-lg dark:border-gray-700"
+              className="rounded-xl shadow-lg border-gray-700"
               style={{
                 backgroundColor: "var(--ant-bg-container)",
               }}
               title={
-                <div className="!text-lg font-semibold !text-blue-600 dark:!text-blue-400">
+                <div className="!text-lg font-semibold !text-blue-400">
                   Direct Contact
                 </div>
               }
             >
-              <Paragraph className="!text-base !font-medium !text-gray-600 dark:!text-gray-300 mb-1">
+              <Paragraph className="!text-base !font-medium !text-gray-300 mb-1">
                 Email:
               </Paragraph>
-              <Text copyable className="!text-xl !font-mono dark:!text-white">
+              <Text copyable className="!text-xl !font-mono !text-white">
                 {portfolioData.contact.email}
               </Text>
 
-              <Paragraph className="!text-base !font-medium !text-gray-600 dark:!text-gray-300 mt-4 mb-1">
+              <Paragraph className="!text-base !font-medium !text-gray-300 mt-4 mb-1">
                 Socials:
               </Paragraph>
               <Space size="large">
@@ -824,7 +824,7 @@ const ContactSection = ({ onDownloadClick }) => {
                   href={`https://${portfolioData.contact.github}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="!text-gray-900 dark:!text-white text-3xl hover:!text-blue-600 dark:hover:!text-blue-400 transition-colors duration-200"
+                  className="!text-white text-3xl hover:!text-blue-400 transition-colors duration-200"
                   aria-label="GitHub Profile"
                 >
                   <FaGithub size={28} />
@@ -833,7 +833,7 @@ const ContactSection = ({ onDownloadClick }) => {
                   href={`https://${portfolioData.contact.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="!text-blue-700 dark:!text-blue-500 text-3xl hover:!text-blue-900 dark:hover:!text-blue-300 transition-colors duration-200"
+                  className="!text-blue-500 text-3xl hover:!text-blue-300 transition-colors duration-200"
                   aria-label="LinkedIn Profile"
                 >
                   <FaLinkedin size={28} />
@@ -964,9 +964,9 @@ const PortfolioApp = () => {
       <Layout className="min-h-screen font-inter">
         {/* Sticky Header with Affix */}
         <Affix offsetTop={0}>
-          <Header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-md transition-colors duration-300 px-4 sm:px-8 lg:px-12 h-auto flex justify-between items-center">
+          <Header className="bg-gray-900 border-b border-gray-700 shadow-md transition-colors duration-300 px-4 sm:px-8 lg:px-12 h-auto flex justify-between items-center">
             {/* Logo or Brand */}
-            <div className="text-xl font-bold text-gray-900 dark:text-white">
+            <div className="text-xl font-bold text-white">
               Debshankar Dey
             </div>
 
@@ -977,7 +977,7 @@ const PortfolioApp = () => {
                 selectedKeys={[current]}
                 onClick={(e) => scrollToSection(e.key)}
                 items={items}
-                className="!bg-transparent dark:!bg-transparent !border-none !text-lg"
+                className="!bg-transparent !border-none !text-lg"
                 overflowedIndicator={<span className="text-white">⋯</span>}
               />
             </div>
@@ -1019,7 +1019,7 @@ const PortfolioApp = () => {
                   backgroundColor: "#ffffff",
                 },
               }}
-              className="dark:bg-gray-900"
+              className="bg-gray-900"
             >
               <Menu
                 mode="inline"
@@ -1030,7 +1030,7 @@ const PortfolioApp = () => {
                 }}
                 items={items}
                 styles={{ color: "#fff" }}
-                className="!bg-transparent dark:!bg-transparent !border-none !text-lg"
+                className="!bg-transparent !border-none !text-lg"
               />
             </Drawer>
           </Header>
@@ -1086,8 +1086,8 @@ const PortfolioApp = () => {
         </Content>
 
         {/* Footer */}
-        <Footer className="text-center bg-white dark:bg-gray-950 dark:!text-gray-400 transition-colors duration-300 p-6">
-          <Paragraph className="!text-sm !text-gray-600 dark:!text-gray-400">
+        <Footer className="text-center bg-gray-950 !text-gray-400 transition-colors duration-300 p-6">
+          <Paragraph className="!text-sm !text-gray-400">
             &copy; {new Date().getFullYear()} {portfolioData.name}. Built with
             React and Ant Design.
           </Paragraph>
@@ -1097,7 +1097,7 @@ const PortfolioApp = () => {
                 href={`https://${portfolioData.contact.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="!text-blue-600 hover:!text-blue-800 dark:!text-blue-400 dark:hover:!text-blue-200 text-2xl"
+                className="!text-blue-400 hover:!text-blue-200 text-2xl"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />
@@ -1106,7 +1106,7 @@ const PortfolioApp = () => {
                 href={`https://${portfolioData.contact.github}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="!text-gray-700 hover:!text-gray-900 dark:!text-gray-400 dark:hover:!text-white text-2xl"
+                className="!text-gray-400 hover:!text-white text-2xl"
                 aria-label="GitHub"
               >
                 <FaGithub />
